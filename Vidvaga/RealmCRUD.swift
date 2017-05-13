@@ -1,5 +1,5 @@
 //
-//  VidvagaApi.swift
+//  RealmCRUD.swift
 //  Vidvaga
 //
 //  Created by Admin on 13.05.17.
@@ -7,13 +7,11 @@
 //
 
 import Foundation
-import Alamofire
 
-class VidvagaApi {
+class RealmCRUD {
     
-    static let shared = VidvagaApi()
+    static let shared = RealmApi()
     private init () { }
-    
     
     
 }

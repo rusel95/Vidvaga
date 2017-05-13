@@ -18,6 +18,9 @@
 		84C24CCF1EC74F9D003AEEC2 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */; };
 		84C24CD11EC75011003AEEC2 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CD01EC75011003AEEC2 /* Authorization.storyboard */; };
 		84C24CD41EC750E9003AEEC2 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CD31EC750E9003AEEC2 /* About.storyboard */; };
+		84F0AFE71EC757D4004217F0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AFE61EC757D4004217F0 /* Post.swift */; };
+		84F0AFEA1EC759AB004217F0 /* RealmCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */; };
+		84F0AFEC1EC75BBD004217F0 /* HelperInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AFEB1EC75BBD004217F0 /* HelperInstance.swift */; };
 		A8601D2FBF36A8D03A0945A8 /* Pods_Vidvaga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C7E47B99239C59C9D87BFB /* Pods_Vidvaga.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		84C24CD01EC75011003AEEC2 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		84C24CD31EC750E9003AEEC2 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		84F0AFE61EC757D4004217F0 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCRUD.swift; sourceTree = "<group>"; };
+		84F0AFEB1EC75BBD004217F0 /* HelperInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperInstance.swift; sourceTree = "<group>"; };
 		C4C7E47B99239C59C9D87BFB /* Pods_Vidvaga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vidvaga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3A04B23FDC0941A9A434AA /* Pods-Vidvaga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vidvaga.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vidvaga/Pods-Vidvaga.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				840026961EC747B300CC28FD /* AppDelegate.swift */,
+				84F0AFE81EC7582C004217F0 /* Api */,
 				84C24CC41EC74C65003AEEC2 /* Models */,
 				84C24CC51EC74C6D003AEEC2 /* Views */,
 				84C24CC61EC74C80003AEEC2 /* Controllers */,
@@ -93,7 +100,8 @@
 		84C24CC41EC74C65003AEEC2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				84C24CC81EC74CC1003AEEC2 /* VidvagaApi.swift */,
+				84F0AFE61EC757D4004217F0 /* Post.swift */,
+				84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -122,11 +130,20 @@
 		84C24CC71EC74C9B003AEEC2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				84F0AFEB1EC75BBD004217F0 /* HelperInstance.swift */,
 				8400269D1EC747B300CC28FD /* Assets.xcassets */,
 				8400269F1EC747B300CC28FD /* LaunchScreen.storyboard */,
 				840026A21EC747B300CC28FD /* Info.plist */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		84F0AFE81EC7582C004217F0 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				84C24CC81EC74CC1003AEEC2 /* VidvagaApi.swift */,
+			);
+			name = Api;
 			sourceTree = "<group>";
 		};
 		D9FFEA6E57CE2B2A8E8CF3E6 /* Pods */ = {
@@ -270,6 +287,9 @@
 				840026991EC747B300CC28FD /* ViewController.swift in Sources */,
 				840026971EC747B300CC28FD /* AppDelegate.swift in Sources */,
 				84C24CC91EC74CC1003AEEC2 /* VidvagaApi.swift in Sources */,
+				84F0AFE71EC757D4004217F0 /* Post.swift in Sources */,
+				84F0AFEC1EC75BBD004217F0 /* HelperInstance.swift in Sources */,
+				84F0AFEA1EC759AB004217F0 /* RealmCRUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
