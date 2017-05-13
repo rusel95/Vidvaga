@@ -12,6 +12,12 @@
 		8400269C1EC747B300CC28FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400269A1EC747B300CC28FD /* Main.storyboard */; };
 		8400269E1EC747B300CC28FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8400269D1EC747B300CC28FD /* Assets.xcassets */; };
 		840026A11EC747B300CC28FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400269F1EC747B300CC28FD /* LaunchScreen.storyboard */; };
+		84C24CC91EC74CC1003AEEC2 /* VidvagaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C24CC81EC74CC1003AEEC2 /* VidvagaApi.swift */; };
+		84C24CCB1EC74E71003AEEC2 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CCA1EC74E71003AEEC2 /* NewsFeed.storyboard */; };
+		84C24CCD1EC74EF1003AEEC2 /* Bookmarks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CCC1EC74EF1003AEEC2 /* Bookmarks.storyboard */; };
+		84C24CCF1EC74F9D003AEEC2 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */; };
+		84C24CD11EC75011003AEEC2 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CD01EC75011003AEEC2 /* Authorization.storyboard */; };
+		84C24CD41EC750E9003AEEC2 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CD31EC750E9003AEEC2 /* About.storyboard */; };
 		A8601D2FBF36A8D03A0945A8 /* Pods_Vidvaga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C7E47B99239C59C9D87BFB /* Pods_Vidvaga.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +30,12 @@
 		8400269D1EC747B300CC28FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840026A01EC747B300CC28FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840026A21EC747B300CC28FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C24CC81EC74CC1003AEEC2 /* VidvagaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VidvagaApi.swift; sourceTree = "<group>"; };
+		84C24CCA1EC74E71003AEEC2 /* NewsFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
+		84C24CCC1EC74EF1003AEEC2 /* Bookmarks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bookmarks.storyboard; sourceTree = "<group>"; };
+		84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		84C24CD01EC75011003AEEC2 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		84C24CD31EC750E9003AEEC2 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		C4C7E47B99239C59C9D87BFB /* Pods_Vidvaga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vidvaga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3A04B23FDC0941A9A434AA /* Pods-Vidvaga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vidvaga.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vidvaga/Pods-Vidvaga.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,13 +82,51 @@
 			isa = PBXGroup;
 			children = (
 				840026961EC747B300CC28FD /* AppDelegate.swift */,
-				840026981EC747B300CC28FD /* ViewController.swift */,
+				84C24CC41EC74C65003AEEC2 /* Models */,
+				84C24CC51EC74C6D003AEEC2 /* Views */,
+				84C24CC61EC74C80003AEEC2 /* Controllers */,
+				84C24CC71EC74C9B003AEEC2 /* Helpers */,
+			);
+			path = Vidvaga;
+			sourceTree = "<group>";
+		};
+		84C24CC41EC74C65003AEEC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84C24CC81EC74CC1003AEEC2 /* VidvagaApi.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		84C24CC51EC74C6D003AEEC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				8400269A1EC747B300CC28FD /* Main.storyboard */,
+				84C24CCA1EC74E71003AEEC2 /* NewsFeed.storyboard */,
+				84C24CCC1EC74EF1003AEEC2 /* Bookmarks.storyboard */,
+				84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */,
+				84C24CD31EC750E9003AEEC2 /* About.storyboard */,
+				84C24CD01EC75011003AEEC2 /* Authorization.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		84C24CC61EC74C80003AEEC2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				840026981EC747B300CC28FD /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		84C24CC71EC74C9B003AEEC2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
 				8400269D1EC747B300CC28FD /* Assets.xcassets */,
 				8400269F1EC747B300CC28FD /* LaunchScreen.storyboard */,
 				840026A21EC747B300CC28FD /* Info.plist */,
 			);
-			path = Vidvaga;
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		D9FFEA6E57CE2B2A8E8CF3E6 /* Pods */ = {
@@ -151,9 +201,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C24CCF1EC74F9D003AEEC2 /* Chat.storyboard in Resources */,
 				840026A11EC747B300CC28FD /* LaunchScreen.storyboard in Resources */,
+				84C24CD41EC750E9003AEEC2 /* About.storyboard in Resources */,
 				8400269E1EC747B300CC28FD /* Assets.xcassets in Resources */,
 				8400269C1EC747B300CC28FD /* Main.storyboard in Resources */,
+				84C24CD11EC75011003AEEC2 /* Authorization.storyboard in Resources */,
+				84C24CCB1EC74E71003AEEC2 /* NewsFeed.storyboard in Resources */,
+				84C24CCD1EC74EF1003AEEC2 /* Bookmarks.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +269,7 @@
 			files = (
 				840026991EC747B300CC28FD /* ViewController.swift in Sources */,
 				840026971EC747B300CC28FD /* AppDelegate.swift in Sources */,
+				84C24CC91EC74CC1003AEEC2 /* VidvagaApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +435,7 @@
 				840026A71EC747B300CC28FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
