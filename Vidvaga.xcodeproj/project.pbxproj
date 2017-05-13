@@ -12,9 +12,11 @@
 		8400269C1EC747B300CC28FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400269A1EC747B300CC28FD /* Main.storyboard */; };
 		8400269E1EC747B300CC28FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8400269D1EC747B300CC28FD /* Assets.xcassets */; };
 		840026A11EC747B300CC28FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400269F1EC747B300CC28FD /* LaunchScreen.storyboard */; };
+		A8601D2FBF36A8D03A0945A8 /* Pods_Vidvaga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C7E47B99239C59C9D87BFB /* Pods_Vidvaga.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49A10E82777D886CE4721199 /* Pods-Vidvaga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vidvaga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vidvaga/Pods-Vidvaga.debug.xcconfig"; sourceTree = "<group>"; };
 		840026931EC747B300CC28FD /* Vidvaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vidvaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840026961EC747B300CC28FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840026981EC747B300CC28FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		8400269D1EC747B300CC28FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840026A01EC747B300CC28FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840026A21EC747B300CC28FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4C7E47B99239C59C9D87BFB /* Pods_Vidvaga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vidvaga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3A04B23FDC0941A9A434AA /* Pods-Vidvaga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vidvaga.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vidvaga/Pods-Vidvaga.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8601D2FBF36A8D03A0945A8 /* Pods_Vidvaga.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050B67F1DC78D72329E3B515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4C7E47B99239C59C9D87BFB /* Pods_Vidvaga.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8400268A1EC747B300CC28FD = {
 			isa = PBXGroup;
 			children = (
 				840026951EC747B300CC28FD /* Vidvaga */,
 				840026941EC747B300CC28FD /* Products */,
+				D9FFEA6E57CE2B2A8E8CF3E6 /* Pods */,
+				050B67F1DC78D72329E3B515 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Vidvaga;
 			sourceTree = "<group>";
 		};
+		D9FFEA6E57CE2B2A8E8CF3E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49A10E82777D886CE4721199 /* Pods-Vidvaga.debug.xcconfig */,
+				EB3A04B23FDC0941A9A434AA /* Pods-Vidvaga.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840026A51EC747B300CC28FD /* Build configuration list for PBXNativeTarget "Vidvaga" */;
 			buildPhases = (
+				0040AFA752917513F581ED29 /* [CP] Check Pods Manifest.lock */,
 				8400268F1EC747B300CC28FD /* Sources */,
 				840026901EC747B300CC28FD /* Frameworks */,
 				840026911EC747B300CC28FD /* Resources */,
+				EBB5AD00BEBDE94CDB0F381E /* [CP] Embed Pods Frameworks */,
+				45A91D7E1D3BB874594DC348 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0040AFA752917513F581ED29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		45A91D7E1D3BB874594DC348 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vidvaga/Pods-Vidvaga-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBB5AD00BEBDE94CDB0F381E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vidvaga/Pods-Vidvaga-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8400268F1EC747B300CC28FD /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		840026A61EC747B300CC28FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49A10E82777D886CE4721199 /* Pods-Vidvaga.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FWHF624C4H;
@@ -272,6 +348,7 @@
 		};
 		840026A71EC747B300CC28FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3A04B23FDC0941A9A434AA /* Pods-Vidvaga.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FWHF624C4H;
