@@ -8,24 +8,24 @@
 
 import UIKit
 
+protocol BookmarksViewControllerDelegate {
+    func delete(bookmark: Post)
+}
+
 class BookmarksTableViewCell: UITableViewCell {
+    
+    var delegate : BookmarksViewControllerDelegate?
     
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBAction func actionBookmark(_ sender: Any) {
-        
+        self.delegate?.delete(bookmark: currentPost)
     }
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var currentPost = Post() {
+        didSet {
+            postTitleLabel.text = currentPost.title
+        }
     }
-    
-    func setPostWith(_ post: Post) {
-        postTitleLabel.text = post.title
-    }
-    
-    
-    
+
 }
