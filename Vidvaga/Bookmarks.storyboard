@@ -6,27 +6,93 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Boormarks Table View Controller-->
         <scene sceneID="aLm-yI-0EF">
             <objects>
-                <tableViewController id="vfd-gr-FcP" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="bookmarksVC" id="vfd-gr-FcP" customClass="BoormarksTableViewController" customModule="Vidvaga" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SEU-eI-4vG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dNV-OY-kdR">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookmarksCell" rowHeight="150" id="dNV-OY-kdR" customClass="BookmarksTableViewCell" customModule="Vidvaga" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dNV-OY-kdR" id="2LY-rN-iM9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch1" translatesAutoresizingMaskIntoConstraints="NO" id="2vc-1x-SDl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="Z2V-qk-uh4"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="GpW-vf-eGn">
+                                            <rect key="frame" x="8" y="101.5" width="359" height="40"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-YO-eVH">
+                                                    <rect key="frame" x="0.0" y="2.5" width="319" height="37.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-12-ttP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="319" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="text" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-lO-UBY">
+                                                            <rect key="frame" x="0.0" y="20.5" width="319" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpv-87-Vlf">
+                                                    <rect key="frame" x="319" y="0.0" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="FkE-od-Cgb"/>
+                                                        <constraint firstAttribute="height" constant="40" id="ljF-Bz-G6Y"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Favourite"/>
+                                                    <connections>
+                                                        <action selector="actionBookmark:" destination="dNV-OY-kdR" eventType="touchUpInside" id="fWm-QB-RVQ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GpW-vf-eGn" secondAttribute="trailing" id="8AW-fn-EOJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="2vc-1x-SDl" secondAttribute="trailing" id="Bmj-if-wwe"/>
+                                        <constraint firstItem="GpW-vf-eGn" firstAttribute="leading" secondItem="2LY-rN-iM9" secondAttribute="leadingMargin" id="RlK-Fy-dEb"/>
+                                        <constraint firstAttribute="bottom" secondItem="2vc-1x-SDl" secondAttribute="bottom" id="YwF-4s-mza"/>
+                                        <constraint firstItem="2vc-1x-SDl" firstAttribute="leading" secondItem="2LY-rN-iM9" secondAttribute="leading" id="mKV-jh-FjD"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="GpW-vf-eGn" secondAttribute="bottom" id="uCb-Yw-4We"/>
+                                        <constraint firstItem="2vc-1x-SDl" firstAttribute="top" secondItem="2LY-rN-iM9" secondAttribute="top" id="wH5-hA-Ryi"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="postImageView" destination="2vc-1x-SDl" id="ggL-CC-iDB"/>
+                                    <outlet property="postTextLabel" destination="dbZ-lO-UBY" id="EIV-HA-J3W"/>
+                                    <outlet property="postTitleLabel" destination="kOg-12-ttP" id="zqH-0M-cH9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="vfd-gr-FcP" id="TWH-KP-V7y"/>
                             <outlet property="delegate" destination="vfd-gr-FcP" id="YBf-kC-wel"/>
@@ -37,7 +103,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4W-4r-V8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="-346"/>
+            <point key="canvasLocation" x="516" y="-346.77661169415296"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch1" width="640" height="1136"/>
+    </resources>
 </document>
