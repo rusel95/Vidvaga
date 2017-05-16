@@ -18,6 +18,9 @@
 		84C24CCF1EC74F9D003AEEC2 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */; };
 		84C24CD11EC75011003AEEC2 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CD01EC75011003AEEC2 /* Authorization.storyboard */; };
 		84C24CD41EC750E9003AEEC2 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CD31EC750E9003AEEC2 /* About.storyboard */; };
+		84C2CDDD1ECAF179003C2185 /* BoormarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2CDDC1ECAF179003C2185 /* BoormarksTableViewController.swift */; };
+		84C2CDDF1ECAF240003C2185 /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2CDDE1ECAF240003C2185 /* BookmarksTableViewCell.swift */; };
+		84C2CDE11ECB0B7B003C2185 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2CDE01ECB0B7B003C2185 /* Extensions.swift */; };
 		84F0AFE71EC757D4004217F0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AFE61EC757D4004217F0 /* Post.swift */; };
 		84F0AFEA1EC759AB004217F0 /* RealmCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */; };
 		84F0AFEC1EC75BBD004217F0 /* HelperInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AFEB1EC75BBD004217F0 /* HelperInstance.swift */; };
@@ -39,6 +42,9 @@
 		84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		84C24CD01EC75011003AEEC2 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		84C24CD31EC750E9003AEEC2 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		84C2CDDC1ECAF179003C2185 /* BoormarksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoormarksTableViewController.swift; sourceTree = "<group>"; };
+		84C2CDDE1ECAF240003C2185 /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
+		84C2CDE01ECB0B7B003C2185 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		84F0AFE61EC757D4004217F0 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCRUD.swift; sourceTree = "<group>"; };
 		84F0AFEB1EC75BBD004217F0 /* HelperInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperInstance.swift; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 			children = (
 				84F0AFE61EC757D4004217F0 /* Post.swift */,
 				84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */,
+				84C2CDDE1ECAF240003C2185 /* BookmarksTableViewCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				840026981EC747B300CC28FD /* ViewController.swift */,
+				84C2CDDC1ECAF179003C2185 /* BoormarksTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				84F0AFEB1EC75BBD004217F0 /* HelperInstance.swift */,
+				84C2CDE01ECB0B7B003C2185 /* Extensions.swift */,
 				8400269D1EC747B300CC28FD /* Assets.xcassets */,
 				8400269F1EC747B300CC28FD /* LaunchScreen.storyboard */,
 				840026A21EC747B300CC28FD /* Info.plist */,
@@ -285,11 +294,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				840026991EC747B300CC28FD /* ViewController.swift in Sources */,
+				84C2CDE11ECB0B7B003C2185 /* Extensions.swift in Sources */,
 				840026971EC747B300CC28FD /* AppDelegate.swift in Sources */,
 				84C24CC91EC74CC1003AEEC2 /* VidvagaApi.swift in Sources */,
+				84C2CDDF1ECAF240003C2185 /* BookmarksTableViewCell.swift in Sources */,
 				84F0AFE71EC757D4004217F0 /* Post.swift in Sources */,
 				84F0AFEC1EC75BBD004217F0 /* HelperInstance.swift in Sources */,
 				84F0AFEA1EC759AB004217F0 /* RealmCRUD.swift in Sources */,
+				84C2CDDD1ECAF179003C2185 /* BoormarksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
