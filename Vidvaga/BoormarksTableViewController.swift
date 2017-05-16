@@ -50,8 +50,8 @@ class BoormarksTableViewController: UITableViewController, BookmarksViewControll
             }
         }
         let indexPath = IndexPath(row: index, section: 0)
+        RealmCRUD.shared.deletePost(postToDelete: allPosts[index])
         allPosts.remove(at: index)
         tableView.deleteRows(at: [indexPath], with: .automatic)
-        RealmCRUD.shared.deletePost(postToDelete: allPosts[index])
     }
 }
