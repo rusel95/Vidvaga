@@ -14,7 +14,7 @@
         <scene sceneID="aLm-yI-0EF">
             <objects>
                 <tableViewController storyboardIdentifier="bookmarksVC" id="vfd-gr-FcP" customClass="BoormarksTableViewController" customModule="Vidvaga" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SEU-eI-4vG">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="SEU-eI-4vG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,10 +36,10 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5Z-Js-amQ">
-                                            <rect key="frame" x="0.0" y="100" width="375" height="50"/>
+                                            <rect key="frame" x="0.0" y="110" width="375" height="40"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpv-87-Vlf">
-                                                    <rect key="frame" x="337" y="10" width="30" height="30"/>
+                                                    <rect key="frame" x="337" y="5" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="488-Pa-gRS"/>
                                                         <constraint firstAttribute="height" constant="30" id="eTy-4I-r5C"/>
@@ -50,7 +50,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-12-ttP">
-                                                    <rect key="frame" x="8" y="8" width="329" height="32"/>
+                                                    <rect key="frame" x="8" y="8" width="329" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="fpv-87-Vlf" secondAttribute="trailing" id="1bT-F8-t3K"/>
                                                 <constraint firstItem="kOg-12-ttP" firstAttribute="bottom" secondItem="fpv-87-Vlf" secondAttribute="bottom" id="5xT-dS-jzp"/>
-                                                <constraint firstAttribute="height" constant="50" id="6TP-yE-rH8"/>
+                                                <constraint firstAttribute="height" constant="40" id="6TP-yE-rH8"/>
                                                 <constraint firstItem="fpv-87-Vlf" firstAttribute="leading" secondItem="kOg-12-ttP" secondAttribute="trailing" id="JLp-8O-yjz"/>
                                                 <constraint firstItem="kOg-12-ttP" firstAttribute="top" secondItem="T5Z-Js-amQ" secondAttribute="topMargin" id="VSv-7y-2bv"/>
                                                 <constraint firstItem="kOg-12-ttP" firstAttribute="leading" secondItem="T5Z-Js-amQ" secondAttribute="leadingMargin" id="dpA-Wv-fu4"/>
@@ -92,7 +92,7 @@
                         </prototypes>
                         <sections/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="vfd-gr-FcP" id="TWH-KP-V7y"/>

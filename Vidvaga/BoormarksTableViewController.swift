@@ -18,6 +18,7 @@ class BoormarksTableViewController: UITableViewController {
         super.viewDidLoad()
      
         allPosts = RealmCRUD.shared.queryPostsToArray()
+
     }
 
     // MARK: - Table view data source
