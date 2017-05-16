@@ -12,7 +12,6 @@ class BookmarksTableViewCell: UITableViewCell {
     
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postTitleLabel: UILabel!
-    @IBOutlet weak var postTextLabel: UILabel!
     @IBAction func actionBookmark(_ sender: Any) {
         
     }
@@ -24,9 +23,7 @@ class BookmarksTableViewCell: UITableViewCell {
     }
     
     func setPostWith(_ post: Post) {
-        postImageView.image = UIImage(data: post.image)
         postTitleLabel.text = post.title
-        postTitleLabel.text = post.text
     }
     
     

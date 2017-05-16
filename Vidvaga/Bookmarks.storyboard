@@ -27,56 +27,57 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch1" translatesAutoresizingMaskIntoConstraints="NO" id="2vc-1x-SDl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="150" id="Z2V-qk-uh4"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="GpW-vf-eGn">
-                                            <rect key="frame" x="8" y="101.5" width="359" height="40"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5Z-Js-amQ">
+                                            <rect key="frame" x="0.0" y="100" width="375" height="50"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-YO-eVH">
-                                                    <rect key="frame" x="0.0" y="2.5" width="319" height="37.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-12-ttP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="319" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="text" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-lO-UBY">
-                                                            <rect key="frame" x="0.0" y="20.5" width="319" height="17"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpv-87-Vlf">
-                                                    <rect key="frame" x="319" y="0.0" width="40" height="40"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpv-87-Vlf">
+                                                    <rect key="frame" x="337" y="10" width="30" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="FkE-od-Cgb"/>
-                                                        <constraint firstAttribute="height" constant="40" id="ljF-Bz-G6Y"/>
+                                                        <constraint firstAttribute="width" constant="30" id="488-Pa-gRS"/>
+                                                        <constraint firstAttribute="height" constant="30" id="eTy-4I-r5C"/>
                                                     </constraints>
-                                                    <state key="normal" title="Favourite"/>
+                                                    <state key="normal" title="Favourite" image="favouriteSelected2"/>
                                                     <connections>
                                                         <action selector="actionBookmark:" destination="dNV-OY-kdR" eventType="touchUpInside" id="fWm-QB-RVQ"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-12-ttP">
+                                                    <rect key="frame" x="8" y="8" width="329" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fpv-87-Vlf" secondAttribute="trailing" id="1bT-F8-t3K"/>
+                                                <constraint firstItem="kOg-12-ttP" firstAttribute="bottom" secondItem="fpv-87-Vlf" secondAttribute="bottom" id="5xT-dS-jzp"/>
+                                                <constraint firstAttribute="height" constant="50" id="6TP-yE-rH8"/>
+                                                <constraint firstItem="fpv-87-Vlf" firstAttribute="leading" secondItem="kOg-12-ttP" secondAttribute="trailing" id="JLp-8O-yjz"/>
+                                                <constraint firstItem="kOg-12-ttP" firstAttribute="top" secondItem="T5Z-Js-amQ" secondAttribute="topMargin" id="VSv-7y-2bv"/>
+                                                <constraint firstItem="kOg-12-ttP" firstAttribute="leading" secondItem="T5Z-Js-amQ" secondAttribute="leadingMargin" id="dpA-Wv-fu4"/>
+                                                <constraint firstItem="fpv-87-Vlf" firstAttribute="centerY" secondItem="T5Z-Js-amQ" secondAttribute="centerY" id="jJ5-zO-RgL"/>
+                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                             </userDefinedRuntimeAttributes>
-                                        </stackView>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="GpW-vf-eGn" secondAttribute="trailing" id="8AW-fn-EOJ"/>
+                                        <constraint firstItem="T5Z-Js-amQ" firstAttribute="centerX" secondItem="2LY-rN-iM9" secondAttribute="centerX" id="1MS-rK-T5V"/>
+                                        <constraint firstItem="T5Z-Js-amQ" firstAttribute="bottom" secondItem="2vc-1x-SDl" secondAttribute="bottom" id="9H2-LO-n1q"/>
+                                        <constraint firstItem="T5Z-Js-amQ" firstAttribute="width" secondItem="2LY-rN-iM9" secondAttribute="width" id="Awa-7A-WQ9"/>
                                         <constraint firstAttribute="trailing" secondItem="2vc-1x-SDl" secondAttribute="trailing" id="Bmj-if-wwe"/>
-                                        <constraint firstItem="GpW-vf-eGn" firstAttribute="leading" secondItem="2LY-rN-iM9" secondAttribute="leadingMargin" id="RlK-Fy-dEb"/>
                                         <constraint firstAttribute="bottom" secondItem="2vc-1x-SDl" secondAttribute="bottom" id="YwF-4s-mza"/>
                                         <constraint firstItem="2vc-1x-SDl" firstAttribute="leading" secondItem="2LY-rN-iM9" secondAttribute="leading" id="mKV-jh-FjD"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="GpW-vf-eGn" secondAttribute="bottom" id="uCb-Yw-4We"/>
                                         <constraint firstItem="2vc-1x-SDl" firstAttribute="top" secondItem="2LY-rN-iM9" secondAttribute="top" id="wH5-hA-Ryi"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
@@ -85,11 +86,11 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="postImageView" destination="2vc-1x-SDl" id="ggL-CC-iDB"/>
-                                    <outlet property="postTextLabel" destination="dbZ-lO-UBY" id="EIV-HA-J3W"/>
                                     <outlet property="postTitleLabel" destination="kOg-12-ttP" id="zqH-0M-cH9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="NO"/>
                         </userDefinedRuntimeAttributes>
@@ -107,6 +108,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favouriteSelected2" width="128" height="128"/>
         <image name="launch1" width="640" height="1136"/>
     </resources>
 </document>
