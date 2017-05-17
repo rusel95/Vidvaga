@@ -74,6 +74,4 @@ class RealmCRUD {
             realm.deleteAll()
         }
     }
-
-    
 }
