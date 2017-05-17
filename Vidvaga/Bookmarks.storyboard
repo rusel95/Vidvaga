@@ -6,94 +6,27 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Boormarks Table View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="aLm-yI-0EF">
             <objects>
-                <tableViewController storyboardIdentifier="bookmarksVC" id="vfd-gr-FcP" customClass="BoormarksTableViewController" customModule="Vidvaga" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="SEU-eI-4vG">
+                <tableViewController id="vfd-gr-FcP" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SEU-eI-4vG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookmarksCell" rowHeight="150" id="dNV-OY-kdR" customClass="BookmarksTableViewCell" customModule="Vidvaga" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dNV-OY-kdR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dNV-OY-kdR" id="2LY-rN-iM9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch1" translatesAutoresizingMaskIntoConstraints="NO" id="2vc-1x-SDl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="150" id="Z2V-qk-uh4"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5Z-Js-amQ">
-                                            <rect key="frame" x="0.0" y="110" width="375" height="40"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpv-87-Vlf">
-                                                    <rect key="frame" x="337" y="5" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="488-Pa-gRS"/>
-                                                        <constraint firstAttribute="height" constant="30" id="eTy-4I-r5C"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Favourite" image="favouriteSelected2"/>
-                                                    <connections>
-                                                        <action selector="actionBookmark:" destination="dNV-OY-kdR" eventType="touchUpInside" id="fWm-QB-RVQ"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-12-ttP">
-                                                    <rect key="frame" x="8" y="8" width="329" height="27"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="fpv-87-Vlf" secondAttribute="trailing" id="1bT-F8-t3K"/>
-                                                <constraint firstItem="kOg-12-ttP" firstAttribute="bottom" secondItem="fpv-87-Vlf" secondAttribute="bottom" id="5xT-dS-jzp"/>
-                                                <constraint firstAttribute="height" constant="40" id="6TP-yE-rH8"/>
-                                                <constraint firstItem="fpv-87-Vlf" firstAttribute="leading" secondItem="kOg-12-ttP" secondAttribute="trailing" id="JLp-8O-yjz"/>
-                                                <constraint firstItem="kOg-12-ttP" firstAttribute="top" secondItem="T5Z-Js-amQ" secondAttribute="topMargin" id="VSv-7y-2bv"/>
-                                                <constraint firstItem="kOg-12-ttP" firstAttribute="leading" secondItem="T5Z-Js-amQ" secondAttribute="leadingMargin" id="dpA-Wv-fu4"/>
-                                                <constraint firstItem="fpv-87-Vlf" firstAttribute="centerY" secondItem="T5Z-Js-amQ" secondAttribute="centerY" id="jJ5-zO-RgL"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="T5Z-Js-amQ" firstAttribute="centerX" secondItem="2LY-rN-iM9" secondAttribute="centerX" id="1MS-rK-T5V"/>
-                                        <constraint firstItem="T5Z-Js-amQ" firstAttribute="bottom" secondItem="2vc-1x-SDl" secondAttribute="bottom" id="9H2-LO-n1q"/>
-                                        <constraint firstItem="T5Z-Js-amQ" firstAttribute="width" secondItem="2LY-rN-iM9" secondAttribute="width" id="Awa-7A-WQ9"/>
-                                        <constraint firstAttribute="trailing" secondItem="2vc-1x-SDl" secondAttribute="trailing" id="Bmj-if-wwe"/>
-                                        <constraint firstAttribute="bottom" secondItem="2vc-1x-SDl" secondAttribute="bottom" id="YwF-4s-mza"/>
-                                        <constraint firstItem="2vc-1x-SDl" firstAttribute="leading" secondItem="2LY-rN-iM9" secondAttribute="leading" id="mKV-jh-FjD"/>
-                                        <constraint firstItem="2vc-1x-SDl" firstAttribute="top" secondItem="2LY-rN-iM9" secondAttribute="top" id="wH5-hA-Ryi"/>
-                                    </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
-                                    </userDefinedRuntimeAttributes>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="postImageView" destination="2vc-1x-SDl" id="ggL-CC-iDB"/>
-                                    <outlet property="postTitleLabel" destination="kOg-12-ttP" id="zqH-0M-cH9"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <sections/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
-                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="vfd-gr-FcP" id="TWH-KP-V7y"/>
                             <outlet property="delegate" destination="vfd-gr-FcP" id="YBf-kC-wel"/>
@@ -104,11 +37,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4W-4r-V8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="-346.77661169415296"/>
+            <point key="canvasLocation" x="516" y="-346"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="favouriteSelected2" width="128" height="128"/>
-        <image name="launch1" width="640" height="1136"/>
-    </resources>
 </document>
