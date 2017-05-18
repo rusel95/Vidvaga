@@ -17,13 +17,15 @@ class Post : Object  {
     dynamic var date : String = ""
     dynamic var type: String = ""
     
-    func setPost(id: Int, title: String, text: String, image: Data, type: String) {
+    func setPost(id: Int, title: String, text: String, image: Data, date: String, type: String) -> Object {
         self.id = id
         self.title = title
         self.text = text
         self.image = image
+        self.date = date
         self.type = type
+        
+        return self
     }
-    
 }
 

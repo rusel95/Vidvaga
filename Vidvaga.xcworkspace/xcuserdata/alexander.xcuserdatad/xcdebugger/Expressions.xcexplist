@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "VidvagaApi.downloadNews(completion : ([Post]?) -&gt; ()) -&gt; ():VidvagaApi.swift">
+      </ContextState>
+      <ContextState
+         contextName = "VidvagaApi.downloadImageUrls(completion : ([String]?) -&gt; ()) -&gt; ():VidvagaApi.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NewsFeedVC.viewDidLoad() -&gt; ():NewsFeedVC.swift">
+      </ContextState>
+      <ContextState
+         contextName = "VidvagaApi.(downloadNews(completion : ([Post]?) -&gt; ()) -&gt; ()).(closure #1):VidvagaApi.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NewsFeedVC.handleTapOnBookmark(recognizer : UITapGestureRecognizer) -&gt; ():NewsFeedVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "post.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "VidvagaApi.(downloadNews(completion : ([Post]?) -&gt; ()) -&gt; ()).(closure #1).(closure #1):VidvagaApi.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NewsFeedVC.(viewDidLoad() -&gt; ()).(closure #1).(closure #1):NewsFeedVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageUrls">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "VidvagaApi.getReponse() -&gt; JSON:VidvagaApi.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "newsFeedJson">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "VidvagaApi.(downloadImageUrls(completion : ([String]?) -&gt; ()) -&gt; ()).(closure #1):VidvagaApi.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NewsFeedVC.(viewDidLoad() -&gt; ()).(closure #1):NewsFeedVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "newsFeed">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "VidvagaApi.(downloadNews(completion : ([Post]?) -&gt; ()) -&gt; ()).(closure #2):VidvagaApi.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "postId">
+            </PersistentString>
+            <PersistentString
+               value = "newsFeed">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

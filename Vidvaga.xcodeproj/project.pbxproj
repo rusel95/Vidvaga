@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113215F81ECC8F9800436519 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113215F71ECC8F9800436519 /* NewsCell.swift */; };
+		113215FA1ECCC75D00436519 /* NewsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113215F91ECCC75D00436519 /* NewsDetailsVC.swift */; };
+		113215FC1ECCDB6600436519 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113215FB1ECCDB6600436519 /* AboutVC.swift */; };
+		11DD8CB11EC776390055C4CC /* RealmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD8CB01EC776390055C4CC /* RealmAPI.swift */; };
+		11DD8CB31EC776B30055C4CC /* NewsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD8CB21EC776B30055C4CC /* NewsFeedVC.swift */; };
 		840026971EC747B300CC28FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840026961EC747B300CC28FD /* AppDelegate.swift */; };
-		840026991EC747B300CC28FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840026981EC747B300CC28FD /* ViewController.swift */; };
 		8400269C1EC747B300CC28FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400269A1EC747B300CC28FD /* Main.storyboard */; };
 		8400269E1EC747B300CC28FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8400269D1EC747B300CC28FD /* Assets.xcassets */; };
 		840026A11EC747B300CC28FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400269F1EC747B300CC28FD /* LaunchScreen.storyboard */; };
@@ -18,9 +22,6 @@
 		84C24CCF1EC74F9D003AEEC2 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */; };
 		84C24CD11EC75011003AEEC2 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CD01EC75011003AEEC2 /* Authorization.storyboard */; };
 		84C24CD41EC750E9003AEEC2 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C24CD31EC750E9003AEEC2 /* About.storyboard */; };
-		84C2CDDD1ECAF179003C2185 /* BoormarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2CDDC1ECAF179003C2185 /* BoormarksTableViewController.swift */; };
-		84C2CDDF1ECAF240003C2185 /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2CDDE1ECAF240003C2185 /* BookmarksTableViewCell.swift */; };
-		84C2CDE11ECB0B7B003C2185 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2CDE01ECB0B7B003C2185 /* Extensions.swift */; };
 		84F0AFE71EC757D4004217F0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AFE61EC757D4004217F0 /* Post.swift */; };
 		84F0AFEA1EC759AB004217F0 /* RealmCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */; };
 		84F0AFEC1EC75BBD004217F0 /* HelperInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AFEB1EC75BBD004217F0 /* HelperInstance.swift */; };
@@ -28,10 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113215F71ECC8F9800436519 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		113215F91ECCC75D00436519 /* NewsDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailsVC.swift; sourceTree = "<group>"; };
+		113215FB1ECCDB6600436519 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		11DD8CB01EC776390055C4CC /* RealmAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmAPI.swift; sourceTree = "<group>"; };
+		11DD8CB21EC776B30055C4CC /* NewsFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedVC.swift; sourceTree = "<group>"; };
 		49A10E82777D886CE4721199 /* Pods-Vidvaga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vidvaga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vidvaga/Pods-Vidvaga.debug.xcconfig"; sourceTree = "<group>"; };
 		840026931EC747B300CC28FD /* Vidvaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vidvaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840026961EC747B300CC28FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		840026981EC747B300CC28FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8400269B1EC747B300CC28FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8400269D1EC747B300CC28FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840026A01EC747B300CC28FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,9 +47,6 @@
 		84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		84C24CD01EC75011003AEEC2 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		84C24CD31EC750E9003AEEC2 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
-		84C2CDDC1ECAF179003C2185 /* BoormarksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoormarksTableViewController.swift; sourceTree = "<group>"; };
-		84C2CDDE1ECAF240003C2185 /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
-		84C2CDE01ECB0B7B003C2185 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		84F0AFE61EC757D4004217F0 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCRUD.swift; sourceTree = "<group>"; };
 		84F0AFEB1EC75BBD004217F0 /* HelperInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperInstance.swift; sourceTree = "<group>"; };
@@ -108,7 +110,7 @@
 			children = (
 				84F0AFE61EC757D4004217F0 /* Post.swift */,
 				84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */,
-				84C2CDDE1ECAF240003C2185 /* BookmarksTableViewCell.swift */,
+				11DD8CB01EC776390055C4CC /* RealmAPI.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -129,8 +131,10 @@
 		84C24CC61EC74C80003AEEC2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				840026981EC747B300CC28FD /* ViewController.swift */,
-				84C2CDDC1ECAF179003C2185 /* BoormarksTableViewController.swift */,
+				11DD8CB21EC776B30055C4CC /* NewsFeedVC.swift */,
+				113215F91ECCC75D00436519 /* NewsDetailsVC.swift */,
+				113215F71ECC8F9800436519 /* NewsCell.swift */,
+				113215FB1ECCDB6600436519 /* AboutVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -139,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				84F0AFEB1EC75BBD004217F0 /* HelperInstance.swift */,
-				84C2CDE01ECB0B7B003C2185 /* Extensions.swift */,
 				8400269D1EC747B300CC28FD /* Assets.xcassets */,
 				8400269F1EC747B300CC28FD /* LaunchScreen.storyboard */,
 				840026A21EC747B300CC28FD /* Info.plist */,
@@ -199,7 +202,7 @@
 				TargetAttributes = {
 					840026921EC747B300CC28FD = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = FWHF624C4H;
+						DevelopmentTeam = EUGNPYBX7U;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -293,15 +296,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840026991EC747B300CC28FD /* ViewController.swift in Sources */,
-				84C2CDE11ECB0B7B003C2185 /* Extensions.swift in Sources */,
 				840026971EC747B300CC28FD /* AppDelegate.swift in Sources */,
+				11DD8CB31EC776B30055C4CC /* NewsFeedVC.swift in Sources */,
+				113215FA1ECCC75D00436519 /* NewsDetailsVC.swift in Sources */,
 				84C24CC91EC74CC1003AEEC2 /* VidvagaApi.swift in Sources */,
-				84C2CDDF1ECAF240003C2185 /* BookmarksTableViewCell.swift in Sources */,
 				84F0AFE71EC757D4004217F0 /* Post.swift in Sources */,
 				84F0AFEC1EC75BBD004217F0 /* HelperInstance.swift in Sources */,
+				113215FC1ECCDB6600436519 /* AboutVC.swift in Sources */,
+				11DD8CB11EC776390055C4CC /* RealmAPI.swift in Sources */,
+				113215F81ECC8F9800436519 /* NewsCell.swift in Sources */,
 				84F0AFEA1EC759AB004217F0 /* RealmCRUD.swift in Sources */,
-				84C2CDDD1ECAF179003C2185 /* BoormarksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,10 +429,11 @@
 			baseConfigurationReference = 49A10E82777D886CE4721199 /* Pods-Vidvaga.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FWHF624C4H;
+				DEVELOPMENT_TEAM = EUGNPYBX7U;
 				INFOPLIST_FILE = Vidvaga/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rusel95.Vidvaga;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazayev.Vidvaga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -439,10 +444,11 @@
 			baseConfigurationReference = EB3A04B23FDC0941A9A434AA /* Pods-Vidvaga.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FWHF624C4H;
+				DEVELOPMENT_TEAM = EUGNPYBX7U;
 				INFOPLIST_FILE = Vidvaga/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rusel95.Vidvaga;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazayev.Vidvaga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
