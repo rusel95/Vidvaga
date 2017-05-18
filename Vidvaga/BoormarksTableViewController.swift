@@ -19,6 +19,9 @@ class BoormarksTableViewController: UITableViewController, BookmarksViewControll
      
         allPosts = RealmCRUD.shared.queryPostsToArray()
 
+        VidvagaApi.shared.loginUserWith { response in
+            
+        }
     }
 
     // MARK: - Table view data source

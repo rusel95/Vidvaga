@@ -26,7 +26,7 @@ class VidvagaApi {
 
     private let apiUrl = "http://dev.inkubator-up.co.ua/api/v1/"
     
-    func getAllNews(with name: String, giveURL: @escaping (String?) -> Void) -> Void {
+    func getAllNews(givePosts: @escaping ([Post]?) -> Void) -> Void {
         
         let newsURL = "news/"
         
@@ -34,16 +34,60 @@ class VidvagaApi {
         
         Alamofire.request(urlForRequest).responseJSON { (response) in
             switch response.result {
-                
             case .success:
                 let json = JSON(response.result.value!)
-                let url = json["hits"][0]["webformatURL"].string
-                giveURL(url)
+                print(json)
+//                let url = json["hits"][0]["webformatURL"].string
+//                givePosts(url)
                 
             case .failure(let error):
                 print(error.localizedDescription, urlForRequest)
-                giveURL(nil)
+                givePosts(nil)
             }
+        }
+    }
+    
+    func getAllQuestions(giveData: @escaping (JSON?) -> Void) -> Void {
+        
+        let questionsURL = "questions/"
+        
+        let urlForRequest = apiUrl + questionsURL
+        
+        Alamofire.request(urlForRequest).response { (response) in
+            print(response)
+//            switch response.result {
+//            case .success:
+//                let json = JSON(response.result.value!)
+//                print(json)
+////                giveData(json)
+//                
+//            case .failure(let error):
+//                print(error.localizedDescription, urlForRequest)
+//                giveData(nil)
+//            }
+        }
+    }
+    
+    func loginUserWith(giveData: @escaping (JSON?) -> Void) -> Void {
+        
+        let loginURL = "/login"
+        let phoneNumberURL = "?phone_number=+38097577071"
+        let passwordURL = "&password=$2y$13$Dv7mbfC0pxO787w349GKFudZ8TIsH.4bByJr0BUk8O307/QZmAqQm"
+        
+        let urlForRequest = apiUrl + loginURL + phoneNumberURL + passwordURL
+        
+        Alamofire.request(urlForRequest).response { (response) in
+            print(response)
+            //            switch response.result {
+            //            case .success:
+            //                let json = JSON(response.result.value!)
+            //                print(json)
+            ////                giveData(json)
+            //
+            //            case .failure(let error):
+            //                print(error.localizedDescription, urlForRequest)
+            //                giveData(nil)
+            //            }
         }
     }
     
