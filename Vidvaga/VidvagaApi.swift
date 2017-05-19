@@ -52,48 +52,48 @@ class VidvagaApi {
         return imageUrls
     }
     
-    func getAllQuestions(giveData: @escaping (JSON?) -> Void) -> Void {
-        
-        let questionsURL = "questions/"
-        
-        let urlForRequest = apiUrl + questionsURL
-        
-        Alamofire.request(urlForRequest).response { (response) in
-            print(response)
-//            switch response.result {
-//            case .success:
-//                let json = JSON(response.result.value!)
-//                print(json)
-////                giveData(json)
-//                
-//            case .failure(let error):
-//                print(error.localizedDescription, urlForRequest)
-//                giveData(nil)
-//            }
-        }
-    }
-    
-    func loginUserWith(giveData: @escaping (JSON?) -> Void) -> Void {
-        
-        let loginURL = "/login"
-        let phoneNumberURL = "?phone_number=+38097577071"
-        let passwordURL = "&password=$2y$13$Dv7mbfC0pxO787w349GKFudZ8TIsH.4bByJr0BUk8O307/QZmAqQm"
-        
-        let urlForRequest = apiUrl + loginURL + phoneNumberURL + passwordURL
-        
-        Alamofire.request(urlForRequest).response { (response) in
-            print(response)
-            //            switch response.result {
-            //            case .success:
-            //                let json = JSON(response.result.value!)
-            //                print(json)
-            ////                giveData(json)
-            //
-            //            case .failure(let error):
-            //                print(error.localizedDescription, urlForRequest)
-            //                giveData(nil)
-            //            }
-        }
-    }
+//    func getAllQuestions(giveData: @escaping (JSON?) -> Void) -> Void {
+//        
+//        let questionsURL = "questions/"
+//        
+//        let urlForRequest = apiUrl + questionsURL
+//        
+//        Alamofire.request(urlForRequest).response { (response) in
+//            print(response)
+////            switch response.result {
+////            case .success:
+////                let json = JSON(response.result.value!)
+////                print(json)
+//////                giveData(json)
+////                
+////            case .failure(let error):
+////                print(error.localizedDescription, urlForRequest)
+////                giveData(nil)
+////            }
+//        }
+//    }
+//    
+//    func loginUserWith(giveData: @escaping (JSON?) -> Void) -> Void {
+//        
+//        let loginURL = "/login"
+//        let phoneNumberURL = "?phone_number=+38097577071"
+//        let passwordURL = "&password=$2y$13$Dv7mbfC0pxO787w349GKFudZ8TIsH.4bByJr0BUk8O307/QZmAqQm"
+//        
+//        let urlForRequest = apiUrl + loginURL + phoneNumberURL + passwordURL
+//        
+//        Alamofire.request(urlForRequest).response { (response) in
+//            print(response)
+//            //            switch response.result {
+//            //            case .success:
+//            //                let json = JSON(response.result.value!)
+//            //                print(json)
+//            ////                giveData(json)
+//            //
+//            //            case .failure(let error):
+//            //                print(error.localizedDescription, urlForRequest)
+//            //                giveData(nil)
+//            //            }
+//        }
+//    }
     
 }
