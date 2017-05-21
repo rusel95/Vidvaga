@@ -17,8 +17,17 @@ class BoormarksTableViewController: UITableViewController, BookmarksViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addRandomToBookmarks()
+        
         allPosts = RealmCRUD.shared.queryPostsToArray()
         
+    }
+
+    
+    func addRandomToBookmarks() {
+        let post = Post()
+        post.title = "some second title in here"
+        RealmCRUD.shared.write(somePost: post)
     }
     
     // MARK: - Table view data source
