@@ -17,25 +17,12 @@ class BoormarksTableViewController: UITableViewController, BookmarksViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addRandomToBookmarks()
-        
-        allPosts = RealmCRUD.shared.queryPostsToArray()
-        
     }
 
-    
-    func addRandomToBookmarks() {
-        let post = Post()
-        post.title = "some second title in here"
-        RealmCRUD.shared.write(somePost: post)
+    override func viewWillAppear(_ animated: Bool) {
+        allPosts = RealmCRUD.shared.queryPostsToArray()
     }
     
-    // MARK: - Table view data source
-    //
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        return allTitles.count
-    //    }
-    //
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allPosts.count
     }
