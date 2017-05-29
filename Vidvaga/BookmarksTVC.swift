@@ -11,31 +11,25 @@ import UIKit
 class BoormarksTableViewController: UITableViewController, BookmarksViewControllerDelegate {
     
     fileprivate var allPosts = [Post]()
-    //    fileprivate var allTitles = Set<String>()
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        print("Init_ResultViewController")
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        addRandomToBookmarks()
-        
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print("Init_ResultViewController")
+    }
+    
+    deinit {
+        print("deinit_ResultViewController")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         allPosts = RealmCRUD.shared.queryPostsToArray()
-        
-    }
-
-    
-    func addRandomToBookmarks() {
-        let post = Post()
-        post.title = "some second title in here"
-        RealmCRUD.shared.write(somePost: post)
     }
     
-    // MARK: - Table view data source
-    //
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        return allTitles.count
-    //    }
-    //
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allPosts.count
     }
@@ -43,11 +37,19 @@ class BoormarksTableViewController: UITableViewController, BookmarksViewControll
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarksCell", for: indexPath) as! BookmarksTableViewCell
         
-        //cell.setPostWith(allPosts[indexPath.row])
         cell.currentPost = allPosts[indexPath.row]
         cell.delegate = self
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = allPosts[indexPath.row]
+        
+        let postDetailsVC = storyboard?.instantiateViewController(withIdentifier: "postDetailsVC") as! PostDetailsVC
+
+        postDetailsVC.post = post
+        navigationController?.pushViewController(postDetailsVC, animated: true)
     }
     
     //MARK: Delegeted function
