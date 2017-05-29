@@ -14,17 +14,41 @@ import Realm
 class NewsFeedVC: UITableViewController {
     
     private var newsFeed = [Post]()
+    private var newsFeedAny = [[String:Any]]()
+    private var newsInDB = [Post]()
     private var imageUrls = [String]()
-    private let heightOfRow: CGFloat = 60
+    private let heightOfRow: CGFloat = 150
+    private let heightOfView: CGFloat = 40
+    private let sizeOfIcon: CGFloat = 24
     let delimiterHeight: CGFloat = 2
     private var backgroundColor = UIColor.init(red: 239/256, green: 239/256, blue: 244/256, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        setUI()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        newsFeed.removeAll()
+        self.newsInDB = RealmCRUD.shared.queryPostsToArray()
+        
+        VidvagaApi.shared.downloadTopNewsId { (topId) in
+            print(topId!)
+            VidvagaApi.shared.downloadNewsById(newsId: topId!, completion: { (topNews) in
+                print(topNews!)
+            })
+        }
+        
         VidvagaApi.shared.downloadNews { (result) in
-            self.newsFeed = result!
-            self.imageUrls = VidvagaApi.shared.getImageUrls()
+            self.newsFeedAny = result!
+            
+            for response in self.newsFeedAny {
+                let post = Post().myInit(response: response)
+                self.newsFeed.append(post as! Post)
+                self.imageUrls.append((post as! Post).getString(response: response))
+            }
+            
             self.tableView.reloadData()
         }
         
@@ -39,18 +63,13 @@ class NewsFeedVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NewsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell") as! NewsCell
         let post = newsFeed[indexPath.row]
         
         cell.titleLbl.text = String(post.title)
         cell.newsImg.af_setImage(withURL: URL(string: imageUrls[indexPath.row])!)
-        
-        cell.bookmarkImg.tag = indexPath.row
-        let tapOnBookmarkIcon = UITapGestureRecognizer.init(target: self, action: #selector(handleTapOnBookmark))
-        cell.bookmarkImg.addGestureRecognizer(tapOnBookmarkIcon)
-        cell.bookmarkImg.isUserInteractionEnabled = true
-        
-        addBookmarkCell(cell: cell)
+
+        addBookmarkIconOnCell(post: post, cell: cell, indexPath: indexPath)
         addDelimiterOnCell(cell, indexPath)
         
         return cell
@@ -75,13 +94,13 @@ class NewsFeedVC: UITableViewController {
         let delimiterView = UIImageView.init(frame: frame)
         let delimColor = backgroundColor
         delimiterView.backgroundColor = delimColor
-        delimiterView.tag = 10
         cell.addSubview(delimiterView)
     }
     
     func handleTapOnBookmark(recognizer: UITapGestureRecognizer){
         let index = recognizer.view?.tag
         let post = newsFeed[index!]
+        recognizer.view?.removeFromSuperview()
         
         let imageView = UIImageView()
         imageView.af_setImage(withURL: URL(string: imageUrls[index!])!)
@@ -89,19 +108,38 @@ class NewsFeedVC: UITableViewController {
         
         post.image = data!
         print(post.image)
-        // Uncomment when merge
-//        if RealmCRUD.shared.isExist() {
-//            RealmCRUD.shared.write(somePost: post)
-//        }
+
+        RealmCRUD.shared.write(somePost: post)
+
+        newsInDB.append(post)
+        self.tableView.reloadData()
     }
     
-    func addBookmarkCell(cell: NewsCell) {
-        // Uncomment when merge
-//        if RealmCRUD.shared.isExist() {
-//            cell.bookmarkImg.image = UIImage.init(named: "like_icon")
-//        } else {
-//            cell.bookmarkImg.image = UIImage.init(named: "unlike_icon")
-//        }
+    func addBookmarkIconOnCell(post: Post, cell: NewsCell, indexPath: IndexPath) {
+        let frame = CGRect.init(x: UIScreen.main.bounds.size.width - 30, y: (heightOfRow - heightOfView + (heightOfView - sizeOfIcon)/2), width: sizeOfIcon, height: sizeOfIcon)
+        let bookmarkIconView = UIImageView.init(frame: frame)
+        bookmarkIconView.tag = indexPath.row
+        
+        let tapOnBookmarkIcon = UITapGestureRecognizer.init(target: self, action: #selector(handleTapOnBookmark))
+        bookmarkIconView.addGestureRecognizer(tapOnBookmarkIcon)
+        bookmarkIconView.isUserInteractionEnabled = true
+        
+        if isPostInBookmarks(somePost: post) {
+            bookmarkIconView.image = UIImage.init(named: "like_icon")
+        } else {
+            bookmarkIconView.image = UIImage.init(named: "unlike_icon")
+        }
+        
+        cell.addSubview(bookmarkIconView)
+    }
+    
+    func isPostInBookmarks(somePost: Post) -> Bool {
+        for post in newsInDB {
+            if post.id == somePost.id {
+                return true
+            }
+        }
+        return false
     }
     
 }

@@ -39,7 +39,7 @@ class RealmCRUD {
         return objects
     }
     
-    private func isExist(somePost: Post) -> Bool {
+    func isExist(somePost: Post) -> Bool {
         
         var exist = false
         

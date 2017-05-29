@@ -9,42 +9,58 @@
 import Foundation
 import Alamofire
 import AlamofireImage
-import SwiftyJSON
-import RealmSwift
 
 class VidvagaApi {
     static let shared = VidvagaApi()
     private init () { }
     
     private let newsURL = "http://dev.inkubator-up.co.ua/api/v1/news"
+    private let topNewsIdUrl = "http://dev.inkubator-up.co.ua/api/v1/news/top_id"
+    
     private var imageUrls = [String]()
     
-    func downloadNews(completion: @escaping ([Post]?) -> Void) {
-        var newsFeed: [Post] = []
+    func downloadNews(completion: @escaping ([[String:Any]]?) -> Void) {
+        var newsFeed: [[String:Any]] = []
 
         Alamofire.request(newsURL).responseJSON { response in
-            if let json = response.result.value {
-
-                let responseJson = json as? [[String: AnyObject]]
-                for item in responseJson!   {
-                    let postId = item["id"] as! Int
-                    let postTitle = item["title"] as! String
-                    let postText = item["text"] as! String
-                    
-                    
-                    let postDate = item["date"] as! Int
-                    let postType = item["type"] as! String
-                    
-                    
-                    
-                    let postImageString = item["image"] as! String
-                    self.imageUrls.append(postImageString)
-                    
-                    let post = Post().setPost(id: postId, title: postTitle, text: postText, image: Data(), date: String(postDate), type: postType)
-                    newsFeed.append(post as! Post)
+            if response.result.value != nil {
+                let json = response.result.value as! [[String:Any]]
+                for post in json {
+                   newsFeed.append(post)
                 }
             }
             completion(newsFeed)
+        }
+    }
+    
+    func downloadTopNewsId(completion: @escaping (Int?) -> Void){
+        var topId: Int!
+        Alamofire.request(topNewsIdUrl).responseJSON { response in
+            if response.result.value != nil {
+                topId = response.result.value as! Int
+            }
+            completion(topId)
+        }
+    }
+    
+    func downloadNewsById(newsId: Int, completion: @escaping ([String:Any]?) -> Void){
+        var news: [String:Any] = [:]
+        let newsByIdUrl = newsURL + "/" + "\(newsId)"
+        Alamofire.request(newsByIdUrl).responseJSON { (response) in
+            if response.result.value != nil {
+                news = response.result.value as! [String : Any]
+            }
+            completion(news)
+        }
+    }
+    
+    func downloadImage(stringUrl: String, completion: @escaping (Data?) -> Void){
+        var data: Data = Data()
+        Alamofire.request(stringUrl).responseData { (response) in
+            if response.result.value != nil {
+                data = response.result.value!
+            }
+            completion(data)
         }
     }
     

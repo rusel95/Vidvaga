@@ -12,6 +12,4 @@ import UIKit
 class NewsCell: UITableViewCell {
     @IBOutlet weak var newsImg: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var bookmarkImg: UIImageView!
-    
 }
