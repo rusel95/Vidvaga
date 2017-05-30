@@ -115,7 +115,7 @@
                             <outlet property="delegate" destination="vfd-gr-FcP" id="YBf-kC-wel"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Boo" image="ask1" id="Xv1-iH-Wmd"/>
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmarks1" id="Xv1-iH-Wmd"/>
                     <navigationItem key="navigationItem" title="Watch your bookmarks here" id="KlZ-dr-dh6">
                         <barButtonItem key="backBarButtonItem" title=" " id="ujB-Aa-voh"/>
                     </navigationItem>
@@ -138,7 +138,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ask1" width="32" height="32"/>
+        <image name="bookmarks1" width="32" height="32"/>
         <image name="like_icon" width="24" height="24"/>
         <image name="no_image_icon" width="500" height="362"/>
     </resources>
