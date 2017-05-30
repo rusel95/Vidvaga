@@ -15,6 +15,7 @@
 		8400269C1EC747B300CC28FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400269A1EC747B300CC28FD /* Main.storyboard */; };
 		8400269E1EC747B300CC28FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8400269D1EC747B300CC28FD /* Assets.xcassets */; };
 		840026A11EC747B300CC28FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400269F1EC747B300CC28FD /* LaunchScreen.storyboard */; };
+		844555D01EDD6A8100863552 /* PostDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844555CF1EDD6A8100863552 /* PostDetails.storyboard */; };
 		847A20D51ECEEA1700CE6112 /* BookmarksTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A20D41ECEEA1700CE6112 /* BookmarksTVC.swift */; };
 		847A20D71ECEEA4C00CE6112 /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A20D61ECEEA4C00CE6112 /* BookmarksTableViewCell.swift */; };
 		84B4D8F31EDCAE0B008BD500 /* PostDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B4D8F21EDCAE0B008BD500 /* PostDetails.storyboard */; };
@@ -43,6 +44,7 @@
 		8400269D1EC747B300CC28FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840026A01EC747B300CC28FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840026A21EC747B300CC28FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844555CF1EDD6A8100863552 /* PostDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostDetails.storyboard; sourceTree = "<group>"; };
 		847A20D41ECEEA1700CE6112 /* BookmarksTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksTVC.swift; sourceTree = "<group>"; };
 		847A20D61ECEEA4C00CE6112 /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
 		84B4D8F21EDCAE0B008BD500 /* PostDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostDetails.storyboard; sourceTree = "<group>"; };
@@ -128,7 +130,7 @@
 				8400269A1EC747B300CC28FD /* Main.storyboard */,
 				84C24CCA1EC74E71003AEEC2 /* NewsFeed.storyboard */,
 				84C24CCC1EC74EF1003AEEC2 /* Bookmarks.storyboard */,
-				84B4D8F21EDCAE0B008BD500 /* PostDetails.storyboard */,
+				844555CF1EDD6A8100863552 /* PostDetails.storyboard */,
 				84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */,
 				84C24CD01EC75011003AEEC2 /* Authorization.storyboard */,
 				84C24CD31EC750E9003AEEC2 /* About.storyboard */,
@@ -245,8 +247,8 @@
 				8400269E1EC747B300CC28FD /* Assets.xcassets in Resources */,
 				8400269C1EC747B300CC28FD /* Main.storyboard in Resources */,
 				84C24CD11EC75011003AEEC2 /* Authorization.storyboard in Resources */,
-				84B4D8F31EDCAE0B008BD500 /* PostDetails.storyboard in Resources */,
 				84C24CCB1EC74E71003AEEC2 /* NewsFeed.storyboard in Resources */,
+				844555D01EDD6A8100863552 /* PostDetails.storyboard in Resources */,
 				84C24CCD1EC74EF1003AEEC2 /* Bookmarks.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

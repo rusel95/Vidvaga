@@ -10,14 +10,17 @@ import UIKit
 
 class PostDetailsVC: UIViewController {
     
-    @IBOutlet weak var newsImg: UIImageView!
-    @IBOutlet weak var typeLbl: UILabel!
-    @IBOutlet weak var dateLbl: UILabel!
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var descriptionTxt: UITextView!
+    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionText: UITextView!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var descriptionTextHeight: NSLayoutConstraint!
     
     var post = Post()
-    var postUrl = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,16 +28,15 @@ class PostDetailsVC: UIViewController {
     }
     
     func setUI() {
-        newsImg.af_setImage(withURL: URL(string: postUrl)!)
-        typeLbl.text = post.type
+        typeLabel.text = post.type
         
         let date = Date(timeIntervalSince1970: Double(post.date)!)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM YYYY"
         let dateString = dateFormatter.string(from: date)
-        dateLbl.text = dateString
+        dateLabel.text = dateString
         
-        titleLbl.text = post.title
-        descriptionTxt.text = post.text
+        titleLabel.text = post.title
+        descriptionText.text = post.text
     }
 }

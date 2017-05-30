@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vfd-gr-FcP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RDJ-UD-RzD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Boormarks Table View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="TxF-RA-9mN">
+            <objects>
+                <navigationController id="RDJ-UD-RzD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="19r-mT-PLI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vfd-gr-FcP" kind="relationship" relationship="rootViewController" id="PwT-2q-HCk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRt-az-haP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="-347"/>
+        </scene>
+        <!--Watch your bookmarks here-->
         <scene sceneID="aLm-yI-0EF">
             <objects>
                 <tableViewController storyboardIdentifier="bookmarksVC" id="vfd-gr-FcP" customClass="BoormarksTableViewController" customModule="Vidvaga" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,23 +115,30 @@
                             <outlet property="delegate" destination="vfd-gr-FcP" id="YBf-kC-wel"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="Xv1-iH-Wmd"/>
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmarks1" id="Xv1-iH-Wmd"/>
+                    <navigationItem key="navigationItem" title="Watch your bookmarks here" id="KlZ-dr-dh6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ujB-Aa-voh"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="K4l-mj-6XY" kind="show" identifier="showDetails" id="le3-8d-JVT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4W-4r-V8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="516" y="-346.77661169415296"/>
         </scene>
         <!--PostDetails-->
-        <scene sceneID="ECQ-CM-lY4">
+        <scene sceneID="vmX-Le-eBg">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="postDetailsVC" storyboardName="PostDetails" id="Hqk-J2-7hU" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fn-Co-S8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="PostDetails" id="K4l-mj-6XY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sp6-mu-6p5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="-378"/>
+            <point key="canvasLocation" x="1165" y="-347"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bookmarks1" width="32" height="32"/>
         <image name="like_icon" width="24" height="24"/>
         <image name="no_image_icon" width="500" height="362"/>
     </resources>
