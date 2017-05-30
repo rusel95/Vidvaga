@@ -13,7 +13,7 @@
         <!--PostDetails-->
         <scene sceneID="nlg-em-7br">
             <objects>
-                <viewController storyboardIdentifier="postDetails" title="PostDetails" id="MaE-8V-dB1" userLabel="PostDetails" customClass="PostDetailsVC" customModule="Vidvaga" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetails" title="PostDetails" id="MaE-8V-dB1" userLabel="PostDetails" customClass="PostDetailsVC" customModule="Vidvaga" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yk3-NK-EhQ"/>
                         <viewControllerLayoutGuide type="bottom" id="3Bc-j9-blT"/>
@@ -95,18 +95,17 @@
                             <constraint firstAttribute="trailing" secondItem="gYi-4I-jv3" secondAttribute="trailing" id="eKX-5s-UB0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DpU-1P-oeF"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="dateLabel" destination="49k-lT-lfp" id="DnK-fh-WbL"/>
-                        <outlet property="dateLbl" destination="49k-lT-lfp" id="VR3-7k-eGB"/>
                         <outlet property="descriptionText" destination="uY9-sI-tsp" id="dfO-EB-BSu"/>
-                        <outlet property="descriptionTxt" destination="uY9-sI-tsp" id="Y2K-TB-EGu"/>
+                        <outlet property="descriptionTextHeight" destination="SZS-xi-Oet" id="DvW-YW-Awp"/>
                         <outlet property="postImage" destination="zdq-lu-Ipk" id="k6u-7T-Kk0"/>
+                        <outlet property="scrollView" destination="gYi-4I-jv3" id="zvF-6r-aMj"/>
                         <outlet property="titleLabel" destination="dag-hx-5T6" id="E9x-hP-OXw"/>
-                        <outlet property="titleLbl" destination="dag-hx-5T6" id="OT0-Qm-l3e"/>
                         <outlet property="typeLabel" destination="q5g-s6-6sh" id="ejm-RC-aP0"/>
-                        <outlet property="typeLbl" destination="q5g-s6-6sh" id="eax-fa-wai"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6l-Co-zEs" userLabel="First Responder" sceneMemberID="firstResponder"/>

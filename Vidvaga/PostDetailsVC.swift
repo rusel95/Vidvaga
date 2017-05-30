@@ -16,6 +16,10 @@ class PostDetailsVC: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var descriptionTextHeight: NSLayoutConstraint!
+    
     var post = Post()
     
     override func viewDidLoad() {
