@@ -71,6 +71,7 @@
                             <outlet property="delegate" destination="Q0Q-VC-GZH" id="1JU-Ht-JUu"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="News" image="news2" id="Vfg-YY-80F"/>
                     <navigationItem key="navigationItem" title="NewsFeed" id="Fti-cS-fR3">
                         <barButtonItem key="rightBarButtonItem" title="Login/Register" id="KHD-Ri-avN"/>
                     </navigationItem>
@@ -199,4 +200,7 @@
             <point key="canvasLocation" x="257" y="-1227"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="news2" width="32" height="32"/>
+    </resources>
 </document>
