@@ -34,9 +34,8 @@ class NewsFeedVC: UITableViewController {
         self.newsInDB = RealmCRUD.shared.queryPostsToArray()
         
         VidvagaApi.shared.downloadTopNewsId { (topId) in
-            print(topId!)
             VidvagaApi.shared.downloadNewsById(newsId: topId!, completion: { (topNews) in
-                print(topNews!)
+                // get top post
             })
         }
         
@@ -88,7 +87,6 @@ class NewsFeedVC: UITableViewController {
         navigationController?.pushViewController(newsDetailsVC, animated: true)
     }
     
-    //MARK: Add delimiter on cell
     func addDelimiterOnCell(_ cell: UITableViewCell, _ indexPath: IndexPath){
         let frame = CGRect(x:0, y:(heightOfRow - delimiterHeight), width:UIScreen.main.bounds.size.width, height:delimiterHeight)
         let delimiterView = UIImageView.init(frame: frame)
@@ -102,17 +100,15 @@ class NewsFeedVC: UITableViewController {
         let post = newsFeed[index!]
         recognizer.view?.removeFromSuperview()
         
-        let imageView = UIImageView()
-        imageView.af_setImage(withURL: URL(string: imageUrls[index!])!)
-        let data = UIImageJPEGRepresentation(imageView.image!, 1.0)
+        VidvagaApi.shared.downloadImage(stringUrl: imageUrls[index!], completion: { (data) in
+            post.image = data!
+            
+            RealmCRUD.shared.write(somePost: post)
+            
+            self.newsInDB.append(post)
+            self.tableView.reloadData()
+        })
         
-        post.image = data!
-        print(post.image)
-
-        RealmCRUD.shared.write(somePost: post)
-
-        newsInDB.append(post)
-        self.tableView.reloadData()
     }
     
     func addBookmarkIconOnCell(post: Post, cell: NewsCell, indexPath: IndexPath) {

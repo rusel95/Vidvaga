@@ -16,7 +16,7 @@
 		8400269E1EC747B300CC28FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8400269D1EC747B300CC28FD /* Assets.xcassets */; };
 		840026A11EC747B300CC28FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400269F1EC747B300CC28FD /* LaunchScreen.storyboard */; };
 		847A20D51ECEEA1700CE6112 /* BookmarksTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A20D41ECEEA1700CE6112 /* BookmarksTVC.swift */; };
-		847A20D71ECEEA4C00CE6112 /* BookarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A20D61ECEEA4C00CE6112 /* BookarksTableViewCell.swift */; };
+		847A20D71ECEEA4C00CE6112 /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A20D61ECEEA4C00CE6112 /* BookmarksTableViewCell.swift */; };
 		84B4D8F31EDCAE0B008BD500 /* PostDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B4D8F21EDCAE0B008BD500 /* PostDetails.storyboard */; };
 		84BE24511EDCBDD000CF3C67 /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE24501EDCBDD000CF3C67 /* PostDetailsVC.swift */; };
 		84C24CC91EC74CC1003AEEC2 /* VidvagaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C24CC81EC74CC1003AEEC2 /* VidvagaApi.swift */; };
@@ -44,7 +44,7 @@
 		840026A01EC747B300CC28FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840026A21EC747B300CC28FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847A20D41ECEEA1700CE6112 /* BookmarksTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksTVC.swift; sourceTree = "<group>"; };
-		847A20D61ECEEA4C00CE6112 /* BookarksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookarksTableViewCell.swift; sourceTree = "<group>"; };
+		847A20D61ECEEA4C00CE6112 /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
 		84B4D8F21EDCAE0B008BD500 /* PostDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostDetails.storyboard; sourceTree = "<group>"; };
 		84BE24501EDCBDD000CF3C67 /* PostDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsVC.swift; sourceTree = "<group>"; };
 		84C24CC81EC74CC1003AEEC2 /* VidvagaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VidvagaApi.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			children = (
 				84F0AFE61EC757D4004217F0 /* Post.swift */,
 				84F0AFE91EC759AB004217F0 /* RealmCRUD.swift */,
-				847A20D61ECEEA4C00CE6112 /* BookarksTableViewCell.swift */,
+				847A20D61ECEEA4C00CE6112 /* BookmarksTableViewCell.swift */,
 				113215F71ECC8F9800436519 /* NewsCell.swift */,
 			);
 			name = Models;
@@ -130,8 +130,8 @@
 				84C24CCC1EC74EF1003AEEC2 /* Bookmarks.storyboard */,
 				84B4D8F21EDCAE0B008BD500 /* PostDetails.storyboard */,
 				84C24CCE1EC74F9D003AEEC2 /* Chat.storyboard */,
-				84C24CD31EC750E9003AEEC2 /* About.storyboard */,
 				84C24CD01EC75011003AEEC2 /* Authorization.storyboard */,
+				84C24CD31EC750E9003AEEC2 /* About.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				840026971EC747B300CC28FD /* AppDelegate.swift in Sources */,
-				847A20D71ECEEA4C00CE6112 /* BookarksTableViewCell.swift in Sources */,
+				847A20D71ECEEA4C00CE6112 /* BookmarksTableViewCell.swift in Sources */,
 				11DD8CB31EC776B30055C4CC /* NewsFeedVC.swift in Sources */,
 				113215FA1ECCC75D00436519 /* NewsDetailsVC.swift in Sources */,
 				84C24CC91EC74CC1003AEEC2 /* VidvagaApi.swift in Sources */,

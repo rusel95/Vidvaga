@@ -17,6 +17,7 @@ class Post : Object  {
     dynamic var text : String = ""
     dynamic var image : Data = Data()
     dynamic var date : String = ""
+    dynamic var tags : String = ""
     dynamic var type: String = ""
     
     func myInit(response: [String:Any]) -> Object {
@@ -25,9 +26,10 @@ class Post : Object  {
         let postTitle = response["title"] as! String
         let postText = response["text"] as! String
         let postDate = response["date"] as! Int
+        let postTags = response["tags"] as! String
         let postType = response["type"] as! String
         
-        setPost(id: postId, title: postTitle, text: postText, date: String(postDate), type: postType)
+        setPost(id: postId, title: postTitle, text: postText, date: String(postDate), tags: postTags, type: postType)
         return (self)
     }
     
@@ -36,11 +38,12 @@ class Post : Object  {
         return postImageString
     }
     
-    func setPost(id: Int, title: String, text: String, date: String, type: String) {
+    func setPost(id: Int, title: String, text: String, date: String, tags: String, type: String) {
         self.id = id
         self.title = title
         self.text = text
         self.date = date
+        self.tags = tags
         self.type = type
     }
 }
