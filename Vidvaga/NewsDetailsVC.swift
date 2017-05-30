@@ -28,7 +28,7 @@ class NewsDetailsVC: UIViewController {
     
     func setUI() {
         newsImg.af_setImage(withURL: URL(string: postUrl)!)
-        typeLbl.text = post.type
+        typeLbl.text = post.tags
         
         let date = Date(timeIntervalSince1970: Double(post.date)!)
         let dateFormatter = DateFormatter()
