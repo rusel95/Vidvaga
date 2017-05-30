@@ -22,6 +22,10 @@ class Post : Object  {
     
     func myInit(response: [String:Any]) -> Object {
   
+//        let json = JSON(response)
+//        self.id = json["id"].int!
+//        self.title = json["title"].string!
+        
         let postId = response["id"] as! Int
         let postTitle = response["title"] as! String
         let postText = response["text"] as! String
