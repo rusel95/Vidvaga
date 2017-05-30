@@ -45,11 +45,14 @@ class BoormarksTableViewController: UITableViewController, BookmarksViewControll
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = allPosts[indexPath.row]
+        self.performSegue(withIdentifier: "showDetails", sender: post)
+    }
         
-        let postDetailsVC = storyboard?.instantiateViewController(withIdentifier: "postDetailsVC") as! PostDetailsVC
-
-        postDetailsVC.post = post
-        navigationController?.pushViewController(postDetailsVC, animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let postDetailsVC = segue.destination as! PostDetailsVC
+            postDetailsVC.post = sender as! Post
+        }
     }
     
     //MARK: Delegeted function

@@ -101,18 +101,21 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="Xv1-iH-Wmd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="K4l-mj-6XY" kind="show" identifier="showDetails" id="skM-Pf-ZVb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4W-4r-V8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="516" y="-346.77661169415296"/>
         </scene>
         <!--PostDetails-->
-        <scene sceneID="ECQ-CM-lY4">
+        <scene sceneID="vmX-Le-eBg">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="postDetailsVC" storyboardName="PostDetails" id="Hqk-J2-7hU" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fn-Co-S8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="PostDetails" id="K4l-mj-6XY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sp6-mu-6p5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="-378"/>
+            <point key="canvasLocation" x="1165" y="-347"/>
         </scene>
     </scenes>
     <resources>
